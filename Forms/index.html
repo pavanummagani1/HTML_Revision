@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <form action="./submit.html" method="get">
+        <!-- Text -->
+        <label for="username">User Name</label> <br>
+        <input type="text" id="username" name="Username" pattern="[a-zA-z0-9$@!&]{8,12}" title="Enter a username of length 8-12 characters" required disabled><br>
+        <br>
+        <!-- Email -->
+        <label for="email">Email</label> <br>
+        <input type="text" id="email" name="Email" pattern="[a-zA-z\d]+@(gmail|outlook|dev|gov).(com|in)" title="Enter the mail in requested format" required> <br>
+        <br>
+        <!-- Password -->
+        <label for="password">Password</label><br>
+        <input type="text" name="Password" id="password" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@$&!?]){8,12}" title="Enter the password in correct format" required>
+        <br>
+        <!-- Gender -->
+        <label for="gender">Gender</label>
+        <br>
+        <input  name="gender" type="radio" id="male">
+        <label for="male">Male</label>
+        <input name="gender" type="radio" id="female">
+        <label for="female">Female</label>
+        <br><br>
+        <!-- Checkbox -->
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">checkbox1</label>
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2">checkbox2</label>
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3">checkbox3</label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+
+
+<!-- Difference between a placeholder and label -->
+<!-- 
+(?=.*[A-Z])==>Checks whether the password contains Captial letters
+ (?=.*[a-z])==>checks whether the password contains small letters
+ (?=.*[0-9])==>checKs whether the password contains digits
+ (?=.*[@$&!?])==>checks whether the password contains given special characters
+  -->
+
+  <!-- Name attribute selects only one value -->
